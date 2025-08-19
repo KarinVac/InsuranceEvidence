@@ -1,0 +1,8 @@
+# Binaries for the build
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
