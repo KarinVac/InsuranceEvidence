@@ -1,6 +1,10 @@
 # Evidence pojištěných
 Jednoduchá konzolová aplikace pro evidenci pojištěných osob.
 
+### **Ukázka aplikace**
+
+<img width="70%" alt="Screenshot_1" src="https://github.com/user-attachments/assets/9e1c2609-6aad-4cff-9bf6-3058fc2124f8" />
+
 ### **Funkce**
 * Přidání nového pojištěného (jméno, příjmení, věk, telefon)
 * Zobrazení všech evidovaných pojištěných
