@@ -5,7 +5,7 @@ Jednoduchá konzolová aplikace pro evidenci pojištěných osob.
 * Přidání nového pojištěného (jméno, příjmení, věk, telefon)
 * Zobrazení všech evidovaných pojištěných
 * Vyhledávání pojištěného dle jména a příjmení
-* Robustní validace uživatelských vstupů
+* Validace uživatelských vstupů
 
 ### **Principy a použité technologie**
 Projekt je navržen s důrazem na principy objektově orientovaného programování (OOP), zejména **SRP** (Single Responsibility Principle) a **DRY** (Don't Repeat Yourself). Pro efektivní vyhledávání dat je využita technologie **LINQ**.
