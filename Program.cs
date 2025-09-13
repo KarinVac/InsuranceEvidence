@@ -3,13 +3,12 @@ using System;
 using System.Collections.Generic;
 
 class Program
-{   // Vytvoření instance třídy Evidence
+{   
     static Evidence evidence = new Evidence();
 
     static void Main(string[] args)
     {
-        int volba = 0;
-        // Cyklus 'while' zajistí, že se menu bude opakovat, dokud uživatel nezadá číslo 4
+        int volba = 0;        
         while (volba != 4)
         {
             Console.Clear();
@@ -52,8 +51,7 @@ class Program
     }
 
     static void PridejPojisteneho()
-    {
-        // Volání metody NactiText, která validuje jméno, příjmení a telefon.
+    {        
         string jmeno = NactiText("Zadejte jméno pojištěného:");
         string prijmeni = NactiText("Zadejte příjmení:");
         string telefon = NactiText("Zadejte telefonní číslo:");
@@ -72,7 +70,7 @@ class Program
             Console.WriteLine("Zatím nejsou evidováni žádní pojištění.");
             return;
         }
-        // 'var' automaticky určí, že 'p' je typu Pojisteny.
+        
         foreach (var p in seznam)
         {
             Console.WriteLine(p);
@@ -97,8 +95,7 @@ class Program
             Console.WriteLine(p);
         }
     }
-
-    // Tato metoda zajišťuje, že uživatel zadá neprázdný textový vstup.    
+         
     static string NactiText(string vyzva)
     {
         string vstup;
@@ -114,8 +111,6 @@ class Program
         return vstup;
     }
 
-    // Tato metoda zajišťuje, že uživatel zadá platné celé číslo.
-    // Opakuje se, dokud není vstup správný, a chrání tak program před chybou
     static int NactiCislo(string vyzva)
     {
         int cislo;
