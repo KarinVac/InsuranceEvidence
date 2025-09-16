@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Keimi\\source\\repos\\KarinVac\\EvidencePojisteni\\EvidencePojisteni.csproj",
-      "projectName": "EvidencePojisteni",
-      "projectPath": "C:\\Users\\Keimi\\source\\repos\\KarinVac\\EvidencePojisteni\\EvidencePojisteni.csproj",
+      "projectUniqueName": "C:\\Users\\Keimi\\source\\repos\\KarinVac\\InsuranceEvidence\\InsuranceEvidence.csproj",
+      "projectName": "InsuranceEvidence",
+      "projectPath": "C:\\Users\\Keimi\\source\\repos\\KarinVac\\InsuranceEvidence\\InsuranceEvidence.csproj",
       "packagesPath": "C:\\Users\\Keimi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Keimi\\source\\repos\\KarinVac\\EvidencePojisteni\\obj\\",
+      "outputPath": "C:\\Users\\Keimi\\source\\repos\\KarinVac\\InsuranceEvidence\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

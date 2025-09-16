@@ -1,129 +1,130 @@
-﻿using EvidencePojisteni;
+﻿using InsuranceEvidence;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 class Program
-{   
-    static Evidence evidence = new Evidence();
+{
+    static EvidenceManager evidence = new EvidenceManager();
 
     static void Main(string[] args)
     {
-        int volba = 0;
-        
-        while (volba != 4)
+        int choice = 0;
+
+        while (choice != 4)
         {
             Console.Clear();
             Console.WriteLine(new string('-', 29));
-            Console.WriteLine("Evidence pojistenych");
+            Console.WriteLine("Insured Persons Database");
             Console.WriteLine(new string('-', 29));
-            Console.WriteLine("Vyberte si akci:");
-            Console.WriteLine("1 - Přidat nového pojištěného");
-            Console.WriteLine("2 - Vypsat všechny pojištěné");
-            Console.WriteLine("3 - Vyhledat pojištěného");
-            Console.WriteLine("4 - Konec");
+            Console.WriteLine("Choose an action:");
+            Console.WriteLine("1 - Add a new insured person");
+            Console.WriteLine("2 - List all insured persons");
+            Console.WriteLine("3 - Find an insured person");
+            Console.WriteLine("4 - Exit");
 
-            volba = NactiCislo("");
+            choice = ReadNumber("");
 
-            switch (volba)
+            switch (choice)
             {
                 case 1:
-                    PridejPojisteneho();
+                    AddInsuredPerson();
                     break;
                 case 2:
-                    VypisVsechnyPojistene();
+                    ListAllInsuredPersons();
                     break;
                 case 3:
-                    VyhledejPojisteneho();
+                    FindInsuredPerson();
                     break;
                 case 4:
-                    Console.WriteLine("Aplikace se ukončí.");
+                    Console.WriteLine("The application will now close.");
                     break;
                 default:
-                    Console.WriteLine("Neplatná volba, stiskněte klávesu a zkuste to znovu.");
+                    Console.WriteLine("Invalid choice. Press any key to try again.");
                     break;
             }
 
-            if (volba != 4)
+            if (choice != 4)
             {
-                Console.WriteLine("\nPokračujte libovolnou klávesou...");
+                Console.WriteLine("\nPress any key to continue...");
                 Console.ReadKey();
             }
         }
     }
 
-    static void PridejPojisteneho()
-    {        
-        string jmeno = NactiText("Zadejte jméno pojištěného:");
-        string prijmeni = NactiText("Zadejte příjmení:");
-        string telefon = NactiText("Zadejte telefonní číslo:");
+    static void AddInsuredPerson()
+    {
+        string firstName = ReadText("Enter first name:");
+        string lastName = ReadText("Enter last name:");
+        string phoneNumber = ReadText("Enter phone number:");
 
-        int vek = NactiCislo("Zadejte vek: ");
+        int age = ReadNumber("Enter age: ");
 
-        evidence.PridejPojisteneho(jmeno, prijmeni, vek, telefon);
-        Console.WriteLine("Data byla uložena.");
+        evidence.AddInsuredPerson(firstName, lastName, age, phoneNumber);
+        Console.WriteLine("Data has been saved.");
     }
 
-    static void VypisVsechnyPojistene()
+    static void ListAllInsuredPersons()
     {
-        var seznam = evidence.VypisVsechny();
-        if (!seznam.Any())
+        var list = evidence.ListAll();
+        if (!list.Any())
         {
-            Console.WriteLine("Zatím nejsou evidováni žádní pojištění.");
+            Console.WriteLine("No insured persons are currently registered.");
             return;
         }
-        
-        foreach (var p in seznam)
+
+        foreach (var p in list)
         {
             Console.WriteLine(p);
         }
     }
 
-    static void VyhledejPojisteneho()
+    static void FindInsuredPerson()
     {
-        string jmeno = NactiText("Zadejte jméno pojištěného:");
-        string prijmeni = NactiText("Zadejte příjmení:");
+        string firstName = ReadText("Enter first name:");
+        string lastName = ReadText("Enter last name:");
 
-        var vysledky = evidence.VyhledejPojisteneho(jmeno, prijmeni);
+        var results = evidence.FindInsuredPerson(firstName, lastName);
 
-        if (!vysledky.Any())
+        if (!results.Any())
         {
-            Console.WriteLine("Pojištěný nebyl nalezen.");
+            Console.WriteLine("Insured person was not found.");
             return;
         }
 
-        foreach (var p in vysledky)
+        foreach (var p in results)
         {
             Console.WriteLine(p);
         }
     }
-   
-    static string NactiText(string vyzva)
+
+    static string ReadText(string prompt)
     {
-        string vstup;
+        string input;
         do
         {
-            Console.Write(vyzva);
-            vstup = Console.ReadLine().Trim();
-            if (string.IsNullOrEmpty(vstup))
+            Console.Write(prompt);
+            input = Console.ReadLine().Trim();
+            if (string.IsNullOrEmpty(input))
             {
-                Console.WriteLine("Vstup nemůže být prázdný. Zkuste to znovu.");
+                Console.WriteLine("Input cannot be empty. Please try again.");
             }
-        } while (string.IsNullOrEmpty(vstup));
-        return vstup;
+        } while (string.IsNullOrEmpty(input));
+        return input;
     }
 
-    static int NactiCislo(string vyzva)
+    static int ReadNumber(string prompt)
     {
-        int cislo;
+        int number;
         while (true)
         {
-            Console.Write(vyzva);            
-            if (int.TryParse(Console.ReadLine(), out cislo))
+            Console.Write(prompt);
+            if (int.TryParse(Console.ReadLine(), out number))
             {
-                return cislo;
+                return number;
             }
-            if (!string.IsNullOrEmpty(vyzva))
-            Console.WriteLine("Neplatné číslo. Zkuste to znovu.");
+            if (!string.IsNullOrEmpty(prompt))
+                Console.WriteLine("Invalid number. Please try again.");
         }
     }
 }

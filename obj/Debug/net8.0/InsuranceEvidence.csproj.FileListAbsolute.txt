@@ -1,0 +1,15 @@
+C:\Users\Keimi\source\repos\KarinVac\InsuranceEvidence\bin\Debug\net8.0\InsuranceEvidence.exe
+C:\Users\Keimi\source\repos\KarinVac\InsuranceEvidence\bin\Debug\net8.0\InsuranceEvidence.deps.json
+C:\Users\Keimi\source\repos\KarinVac\InsuranceEvidence\bin\Debug\net8.0\InsuranceEvidence.runtimeconfig.json
+C:\Users\Keimi\source\repos\KarinVac\InsuranceEvidence\bin\Debug\net8.0\InsuranceEvidence.dll
+C:\Users\Keimi\source\repos\KarinVac\InsuranceEvidence\bin\Debug\net8.0\InsuranceEvidence.pdb
+C:\Users\Keimi\source\repos\KarinVac\InsuranceEvidence\obj\Debug\net8.0\InsuranceEvidence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Keimi\source\repos\KarinVac\InsuranceEvidence\obj\Debug\net8.0\InsuranceEvidence.AssemblyInfoInputs.cache
+C:\Users\Keimi\source\repos\KarinVac\InsuranceEvidence\obj\Debug\net8.0\InsuranceEvidence.AssemblyInfo.cs
+C:\Users\Keimi\source\repos\KarinVac\InsuranceEvidence\obj\Debug\net8.0\InsuranceEvidence.csproj.CoreCompileInputs.cache
+C:\Users\Keimi\source\repos\KarinVac\InsuranceEvidence\obj\Debug\net8.0\InsuranceEvidence.sourcelink.json
+C:\Users\Keimi\source\repos\KarinVac\InsuranceEvidence\obj\Debug\net8.0\InsuranceEvidence.dll
+C:\Users\Keimi\source\repos\KarinVac\InsuranceEvidence\obj\Debug\net8.0\refint\InsuranceEvidence.dll
+C:\Users\Keimi\source\repos\KarinVac\InsuranceEvidence\obj\Debug\net8.0\InsuranceEvidence.pdb
+C:\Users\Keimi\source\repos\KarinVac\InsuranceEvidence\obj\Debug\net8.0\InsuranceEvidence.genruntimeconfig.cache
+C:\Users\Keimi\source\repos\KarinVac\InsuranceEvidence\obj\Debug\net8.0\ref\InsuranceEvidence.dll
