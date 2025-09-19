@@ -18,12 +18,7 @@ public class InsuredPerson
         Age = age;
         PhoneNumber = phoneNumber;
     }
-
-    public string GetFormattedInfo()
-    {
-        return $"Name: {FirstName} {LastName}, Age: {Age}, Phone: {PhoneNumber}";
-    }
-
+       
     public override string ToString()
     {
         return $"{FirstName.PadRight(15)} {LastName.PadRight(15)} {Age} \t{PhoneNumber}";
